@@ -8,13 +8,26 @@
  * @author carlos
  */
 public class Musica extends Interes implements interesable{
+    
+    private String tipoMusica;
 
     public Musica() {
     }
 
-    public Musica(String usuario, String password, int tiempoConectado, int likes, String tipoMusica, String generoTv, String nombreRed) {
-        super(usuario, password, tiempoConectado, likes, tipoMusica, generoTv, nombreRed);
+    public Musica(String usuario, String password, int tiempoConectado, int likes, String tipoMusica) {
+        super(usuario, password, tiempoConectado, likes);
+        this.tipoMusica = tipoMusica;
     }
+
+    
+    public String getTipoMusica() {
+        return tipoMusica;
+    }
+
+    public void setTipoMusica(String tipoMusica) {
+        this.tipoMusica = tipoMusica;
+    }
+    
   @Override
   public void Listar(){
         System.out.println("Usuario: " + usuario);

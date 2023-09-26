@@ -16,21 +16,21 @@ public abstract class Interes {
     protected String password;
     protected int tiempoConectado;
     protected int likes;
-    protected String tipoMusica;
-    protected String generoTv;
+    
+    
     protected String nombreRed;
 
     public Interes() {
     }
 
-    public Interes(String usuario, String password, int tiempoConectado, int likes, String tipoMusica, String generoTv, String nombreRed) {
+    public Interes(String usuario, String password, int tiempoConectado, int likes) {
         this.usuario = usuario;
         this.password = password;
         this.tiempoConectado = tiempoConectado;
         this.likes = likes;
-        this.tipoMusica = tipoMusica;
-        this.generoTv = generoTv;
-        this.nombreRed = nombreRed;
+        
+        
+        
     }
 
     public String getUsuario() {
@@ -65,33 +65,13 @@ public abstract class Interes {
         this.likes = likes;
     }
 
-    public String getTipoMusica() {
-        return tipoMusica;
-    }
+  
+   
 
-    public void setTipoMusica(String tipoMusica) {
-        this.tipoMusica = tipoMusica;
-    }
-
-    public String getGeneroTv() {
-        return generoTv;
-    }
-
-    public void setGeneroTv(String generoTv) {
-        this.generoTv = generoTv;
-    }
-
-    public String getNombreRed() {
-        return nombreRed;
-    }
-
-    public void setNombreRed(String nombreRed) {
-        this.nombreRed = nombreRed;
-    }
-
+    
     @Override
     public String toString() {
-        return "Interes{" + "usuario=" + usuario + ", password=" + password + ", tiempoConectado=" + tiempoConectado + ", likes=" + likes + ", tipoMusica=" + tipoMusica + ", generoTv=" + generoTv + ", nombreRed=" + nombreRed + '}';
+        return "Interes{" + "usuario=" + usuario + ", password=" + password + ", tiempoConectado=" + tiempoConectado + ", likes=" + likes + ", nombreRed=" + nombreRed + '}';
     }
 
     public void añadir(ArrayList Arraylist, Interes interes) {

@@ -8,11 +8,20 @@
  * @author carlos
  */
 public class VerTv extends Interes implements interesable{
-
-    public VerTv(String usuario, String password, int tiempoConectado, int likes, String tipoMusica, String generoTv, String nombreRed) {
-        super(usuario, password, tiempoConectado, likes, tipoMusica, generoTv, nombreRed);
+    
+    private String generoTv;
+    
+    public VerTv(String usuario, String password, int tiempoConectado, int likes, String nombreRed) {
+        super(usuario, password, tiempoConectado, likes);
+        this.generoTv = generoTv;
+    }
+     public String getGeneroTv() {
+        return generoTv;
     }
 
+    public void setGeneroTv(String generoTv) {
+        this.generoTv = generoTv;
+    }
     @Override
     public void Listar() {
         System.out.println("Usuario: " + usuario);

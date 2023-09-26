@@ -15,12 +15,12 @@ public class Principal {
         ArrayList<Interes> intereses = new ArrayList<>();
 
         // Crear objetos de las clases
-        Musica usuario1 = new Musica("Usuario1", "Password1", 120, 50, "Rock", "N/A", "N/A");
-        Musica usuario2 = new Musica("Usuario2", "Password2", 180, 75, "Pop", "N/A", "N/A");
-        VerTv usuario3 = new VerTv("Usuario3", "Password3", 240, 60, "N/A", "Comedia", "N/A");
-        VerTv usuario4 = new VerTv("Usuario4", "Password4", 150, 45, "N/A", "Drama", "N/A");
-        RedSocial usuario5 = new RedSocial("Usuario5", "Password5", 300, 80, "N/A", "N/A", "Facebook");
-        RedSocial usuario6 = new RedSocial("Usuario6", "Password6", 210, 70, "N/A", "N/A", "Instagram");
+        Musica usuario1 = new Musica("alessia", "cucaracha", 120, 50, "Rock");
+        Musica usuario2 = new Musica("tomas", "admin", 180, 75, "Pop");
+        VerTv usuario3 = new VerTv("jennifer", "hormiga", 240, 60, "Comedia");
+        VerTv usuario4 = new VerTv("lorena", "abeja23", 150, 45, "Drama");
+        RedSocial usuario5 = new RedSocial("ignacia", "serpiente09", 300, 80, "Facebook");
+        RedSocial usuario6 = new RedSocial("valeria", "oveja", 210, 70,  "Instagram");
 
         // Agregar objetos a la lista de intereses
         intereses.add(usuario1);
@@ -31,9 +31,9 @@ public class Principal {
         intereses.add(usuario6);
 
         // Contadores para likes y tiempo de cada tipo de interés
-        int ctrLikesTv = 0, ctrMinutesTv = 0;
-        int ctrLikesRed = 0, ctrMinutesRed = 0;
-        int ctrLikesMusica = 0, ctrMinutesMusica = 0;
+        int countLikesTv = 0, countMinutesTv = 0;
+        int countLikesRed = 0, countMinutesRed = 0;
+        int countLikesMusica = 0, countMinutesMusica = 0;
 
         // Calcular y mostrar el interés con más likes y tiempo
         for (Interes interes : intereses) {
@@ -41,14 +41,14 @@ public class Principal {
 
             // Actualizar los contadores según el tipo de interés
             if (interes instanceof Musica) {
-                ctrLikesMusica += interes.getLikes();
-                ctrMinutesMusica += interes.getTiempoConectado();
+                countLikesMusica += interes.getLikes();
+                countMinutesMusica += interes.getTiempoConectado();
             } else if (interes instanceof VerTv) {
-                ctrLikesTv += interes.getLikes();
-                ctrMinutesTv += interes.getTiempoConectado();
+                countLikesTv += interes.getLikes();
+                countMinutesTv += interes.getTiempoConectado();
             } else if (interes instanceof RedSocial) {
-                ctrLikesRed += interes.getLikes();
-                ctrMinutesRed += interes.getTiempoConectado();
+                countLikesRed += interes.getLikes();
+                countMinutesRed += interes.getTiempoConectado();
             }
 
             System.out.println("---");
@@ -58,41 +58,41 @@ public class Principal {
         String tipoConMasLikes = "";
         int maxLikes = 0;
 
-        if (ctrLikesMusica > maxLikes) {
-            maxLikes = ctrLikesMusica;
+        if (countLikesMusica > maxLikes) {
+            maxLikes = countLikesMusica;
             tipoConMasLikes = "Música";
         }
 
-        if (ctrLikesTv > maxLikes) {
-            maxLikes = ctrLikesTv;
+        if (countLikesTv > maxLikes) {
+            maxLikes = countLikesTv;
             tipoConMasLikes = "TV";
         }
 
-        if (ctrLikesRed > maxLikes) {
-            maxLikes = ctrLikesRed;
+        if (countLikesRed > maxLikes) {
+            maxLikes = countLikesRed;
             tipoConMasLikes = "Redes Sociales";
         }
 
-        System.out.println("El tema con mas likes es: " + tipoConMasLikes);
+        System.out.println("El tipo con mas likes es: " + tipoConMasLikes);
 
         String tipoConMasTiempo = "";
         int maxTiempo = 0;
 
-        if (ctrMinutesMusica > maxTiempo) {
-            maxTiempo = ctrMinutesMusica;
+        if (countMinutesMusica > maxTiempo) {
+            maxTiempo = countMinutesMusica;
             tipoConMasTiempo = "Música";
         }
 
-        if (ctrMinutesTv > maxTiempo) {
-            maxTiempo = ctrMinutesTv;
+        if (countMinutesTv > maxTiempo) {
+            maxTiempo = countMinutesTv;
             tipoConMasTiempo = "TV";
         }
 
-        if (ctrMinutesRed > maxTiempo) {
-            maxTiempo = ctrMinutesRed;
+        if (countMinutesRed > maxTiempo) {
+            maxTiempo = countMinutesRed;
             tipoConMasTiempo = "Redes Sociales";
         }
 
-        System.out.println("El tema con mas tiempo conectado es: " + tipoConMasTiempo);
+        System.out.println("El tipo con mas tiempo conectado es: " + tipoConMasTiempo);
     }
 }

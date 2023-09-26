@@ -12,8 +12,16 @@ public class RedSocial extends Interes implements interesable {
     public RedSocial() {
     }
 
-    public RedSocial(String usuario, String password, int tiempoConectado, int likes, String tipoMusica, String generoTv, String nombreRed) {
-        super(usuario, password, tiempoConectado, likes, tipoMusica, generoTv, nombreRed);
+    public RedSocial(String usuario, String password, int tiempoConectado, int likes, String nombreRed) {
+        super(usuario, password, tiempoConectado, likes);
+        this.nombreRed = nombreRed;
+    }
+        public String getNombreRed() {
+        return nombreRed;
+    }
+
+    public void setNombreRed(String nombreRed) {
+        this.nombreRed = nombreRed;
     }
 
     @Override
