@@ -17,8 +17,6 @@ public abstract class Interes {
     protected int tiempoConectado;
     protected int likes;
     
-    
-    protected String nombreRed;
 
     public Interes() {
     }
@@ -71,7 +69,7 @@ public abstract class Interes {
     
     @Override
     public String toString() {
-        return "Interes{" + "usuario=" + usuario + ", password=" + password + ", tiempoConectado=" + tiempoConectado + ", likes=" + likes + ", nombreRed=" + nombreRed + '}';
+        return "Interes{" + "usuario=" + usuario + ", password=" + password + ", tiempoConectado=" + tiempoConectado + ", likes=" + likes + '}';
     }
 
     public void añadir(ArrayList Arraylist, Interes interes) {

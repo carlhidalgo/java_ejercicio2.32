@@ -8,7 +8,9 @@
  * @author carlos
  */
 public class RedSocial extends Interes implements interesable {
-
+    
+    private String nombreRed;
+    
     public RedSocial() {
     }
 
